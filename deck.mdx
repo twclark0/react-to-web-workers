@@ -1,5 +1,6 @@
 export { notes as theme } from '@mdx-deck/themes'
 import Footer from 'components/Footer'
+import { Title } from 'components/Title'
 
 # React to Web Workers
 
@@ -68,7 +69,7 @@ import Footer from 'components/Footer'
 
 # Not all :rose:
 
-<img style={{ height: '500px' }} src="tweet.png" />
+<img src="tweet.png" />
 
 <Footer />
 
@@ -76,7 +77,6 @@ import Footer from 'components/Footer'
 
 # Workers: Cons :thumbsdown:
 
-- Kind of finicky
 - Sticky cache (Browser refresh doesn't do anything)
 - No access to localStorage, some window properties, or DOM
 - Little to no IE support
@@ -125,7 +125,13 @@ import Footer from 'components/Footer'
 
 <img src="one-service.png" />
 
-- Uses variety of eventListeners ('install', 'activate', 'fetch', 'message')
+<Footer />
+
+---
+
+## How to SERVICE WORKER
+
+- Uses variety of eventListeners ('install', 'fetch', 'message')
 - Works off Promises
 - Works only through HTTPS & localhost
 - Utilizes the Cache Storage API
@@ -135,7 +141,7 @@ import Footer from 'components/Footer'
 
 ---
 
-# SERVICE Worker
+<Title text="Service Worker" />
 
 <img src="service-register.png" />
 
@@ -143,13 +149,13 @@ import Footer from 'components/Footer'
 
 ---
 
-## Sync state across tabs
+<Title text="Sync state across tabs" />
 
 <div
   dangerouslySetInnerHTML={{
     __html: `
       <video
-        style="max-width: 50%"
+        style="max-width: 70%; margin-top: 15px;"
         controls
         autoplay
         loop
@@ -218,16 +224,6 @@ import Footer from 'components/Footer'
 1. `npm run build`
 2. `cd build/`
 3. `http-server`
-
-<Footer />
-
----
-
-# CRA Non-opted in demo
-
-1. Check application tab for service workers
-2. Refresh and notice network tab
-3. Go offline and watch the app break
 
 <Footer />
 
@@ -355,10 +351,7 @@ import Footer from 'components/Footer'
 
 ---
 
-# Caching Assets with Workbox
-
-- Version control
-- Cache API
+### Caching Assets with Workbox & Cache API
 
 <img style={{ maxWidth: '80%' }} src="cache-api.png" />
 
@@ -391,7 +384,7 @@ import Footer from 'components/Footer'
 
 ---
 
-### Thread blocking demo
+<Title text="Thread blocking demo" />
 
 <div
   dangerouslySetInnerHTML={{
@@ -412,9 +405,7 @@ import Footer from 'components/Footer'
 
 ---
 
-### Non-thread blocking demo
-
-##### React code
+### App.js
 
 <img src="react-worker-code.png" style={{ maxWidth: '80%' }} />
 
@@ -422,9 +413,7 @@ import Footer from 'components/Footer'
 
 ---
 
-### Non-thread blocking demo
-
-##### Worker code
+### test.worker.js
 
 <img src="worker-code.png" style={{ maxWidth: '80%' }} />
 
@@ -432,13 +421,13 @@ import Footer from 'components/Footer'
 
 ---
 
-### Non-thread blocking demo
+<Title text="Non-thread blocking demo" />
 
 <div
   dangerouslySetInnerHTML={{
     __html: `
       <video
-        style="max-width: 70%"
+        style="max-width: 63%"
         controls
         autoplay
         loop
@@ -453,11 +442,18 @@ import Footer from 'components/Footer'
 
 ---
 
-# Notes on Web Workers
+<Title text="Notes on Web Workers" />
 
 - Dedicated worker is only accessible by the script that called it (new Worker())
 - Shared workers accessible by multiple scripts (new SharedWorker())
 - Can destroy with `myWorker.terminate()`
+
+<Footer />
+
+---
+
+<Title text="Notes on Web Workers" />
+
 - Can create "sub-workers"
 - Have access to global function, importScripts()
 
@@ -481,6 +477,13 @@ import Footer from 'components/Footer'
 - [WorkBox](https://developers.google.com/web/tools/workbox/)
 - [Custom workbox config CRA Initial Proposal](https://github.com/facebook/create-react-app/issues/5359)
 - [Custom workbox config CRA Pull request ](https://github.com/facebook/create-react-app/pull/5369)
+
+<Footer />
+
+---
+
+# References
+
 - [Web worker vs. Service Worker](https://bitsofco.de/web-workers-vs-service-workers-vs-worklets/)
 - [Prefetch links](https://blog.bitsrc.io/prefetching-links-using-service-workers-d9f6babfd0b)
 - [Web Workers support in CRA](https://github.com/facebook/create-react-app/pull/5886)
