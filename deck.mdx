@@ -1,0 +1,495 @@
+export { notes as theme } from '@mdx-deck/themes'
+import Footer from 'components/Footer'
+
+# React to Web Workers
+
+##### Tyler Clark
+
+---
+
+# 👋 Nice to meet ya
+
+- Full stack software engineer: @pluralsight
+
+- Video courses: @eggheadio
+
+- Twitter: @iamtylerwclark
+
+---
+
+# Table of Contents
+
+- What are workers? (web and service)
+
+- Service worker notes & demo
+
+- Web worker notes & demo
+
+- Tips / Tricks / Additional References
+
+<Footer />
+
+---
+
+# Why tho?
+
+> A service worker, properly configured, makes your web app fast and reliable.
+
+> -Jeff Posnick
+
+---
+
+## Let's get our terminology right :white_check_mark:
+
+<Footer />
+
+---
+
+## Web worker vs. Service worker
+
+- All are "workers"
+- Dedicated & Shared workers = "Web worker"
+- Service worker = "Service worker"
+
+<Footer />
+
+---
+
+# What are workers?
+
+- Run scripts in another thread
+- Can communicate with client app
+- Kindof like a browser extension
+- Sits in middle of client and server
+
+<Footer />
+
+---
+
+# Not all :rose:
+
+<img style={{ height: '500px' }} src="tweet.png" />
+
+<Footer />
+
+---
+
+# Workers: Cons :thumbsdown:
+
+- Kind of finicky
+- Sticky cache (Browser refresh doesn't do anything)
+- No access to localStorage, some window properties, or DOM
+- Little to no IE support
+- Steep learning curve (i.e Webpack / Parcel)
+
+<Footer />
+
+---
+
+# Workers: Pros :rocket:
+
+- Catch offline requests\*
+- Prefetching resources\*
+- Handle complex UI blocking functions\*
+- Push notifications
+- Built in thread safety
+
+<Footer />
+
+---
+
+# How to ANY worker :raising_hand:
+
+- You can use normal JS syntax (For the most part)
+- Reference a JS file or script type="text/js-worker"
+- IndexedDB
+- WebSockets :scream:
+
+<Footer />
+
+---
+
+# How to WEB WORKER
+
+<img src="one-worker.png" />
+
+- Messages control communication
+- postMessage & onmessage
+- Can also use eventListeners('message')
+
+<Footer />
+
+---
+
+# How to SERVICE WORKER
+
+<img src="one-service.png" />
+
+- Uses variety of eventListeners ('install', 'activate', 'fetch', 'message')
+- Works off Promises
+- Works only through HTTPS & localhost
+- Utilizes the Cache Storage API
+- Have lifecycle events (Causes most confusion)
+
+<Footer />
+
+---
+
+# SERVICE Worker
+
+<img src="service-register.png" />
+
+<Footer />
+
+---
+
+## Sync state across tabs
+
+<div
+  dangerouslySetInnerHTML={{
+    __html: `
+      <video
+        style="max-width: 50%"
+        controls
+        autoplay
+        loop
+        muted
+        src="./service-worker-vid.mp4"
+      />
+    `
+  }}
+/>
+
+<Footer />
+
+---
+
+<img src="workbox.png" />
+
+> Workbox is a library that bakes in a set of best practices and removes the boilerplate every developer writes when working with service workers.
+
+<Footer />
+
+---
+
+## Why Workbox?
+
+- Precaching
+- Runtime caching
+- Request routing
+- Background sync
+- Helpful debugging
+
+---
+
+## Easy implementation
+
+<img src="workbox-exm.png" />
+
+---
+
+## Simple and Complex Recipes
+
+- Caching CSS / JS / Images
+- Caching from multiple origins
+- Offer page reload
+- Provide a fallback responses (images, document, font)
+
+---
+
+# React :heart: Workers
+
+<Footer />
+
+---
+
+# create-react-app v2
+
+- Introduced opt-in with _Google's Workbox_ (GenerateSW)
+- All static site assets are cached (cached first)
+- App works offline
+
+<Footer />
+
+---
+
+# CRA Non-opted in demo
+
+1. `npm run build`
+2. `cd build/`
+3. `http-server`
+
+<Footer />
+
+---
+
+# CRA Non-opted in demo
+
+1. Check application tab for service workers
+2. Refresh and notice network tab
+3. Go offline and watch the app break
+
+<Footer />
+
+---
+
+<div
+  dangerouslySetInnerHTML={{
+    __html: `
+      <video
+        style="max-width: 80%"
+        controls
+        autoplay
+        loop
+        muted
+        src="./non-opted-in.mp4"
+      />
+    `
+  }}
+/>
+
+<Footer />
+
+---
+
+# CRA demo opted-In
+
+1. `cd ..`
+2. Register default service worker
+
+<Footer />
+
+---
+
+# CRA demo opted-In
+
+<img style={{ width: '90%' }} src="register.png" />
+
+<Footer />
+
+---
+
+# CRA demo opted-In
+
+1. `npm run build`
+2. `cd build/`
+3. `http-server`
+
+<Footer />
+
+---
+
+<div
+  dangerouslySetInnerHTML={{
+    __html: `
+      <video
+        style="max-width: 80%"
+        controls
+        autoplay
+        loop
+        muted
+        src="./opted-in.mp4"
+      />
+    `
+  }}
+/>
+
+<Footer />
+
+---
+
+# That's it! :clap:
+
+<Footer />
+
+---
+
+# Warning :grimacing:
+
+<img src="cached-2.png" />
+
+<Footer />
+
+---
+
+# CRA notes
+
+- App can be added to phone
+- Assets have cache-first strategy
+- Cached navigation requests for your HTML
+
+<Footer />
+
+---
+
+# CRA service-worker gotchas
+
+- Service worker is kept in "waiting" state
+- Users have to close tabs (not reload)
+- "New content is available once existing tabs are closed"
+- No cross-origin traffic
+
+<Footer />
+
+---
+
+## Customize workbox GenerateSW in CRA
+
+#### Coming soon?
+
+- Custom workbox config file [Initial Proposal](https://github.com/facebook/create-react-app/issues/5359)
+- Sitting with changes requested [Pull request ](https://github.com/facebook/create-react-app/pull/5369)
+
+<Footer />
+
+---
+
+## Can use InjectManifest without ejecting
+
+- Gives more control (skipWaiting()) :white_check_mark:
+- Use other APIs such as Web Push :white_check_mark:
+- Relatively easy to add in CRA :white_check_mark:
+- See references page at end
+
+<Footer />
+
+---
+
+# Caching Assets with Workbox
+
+- Version control
+- Cache API
+
+<img style={{ maxWidth: '80%' }} src="cache-api.png" />
+
+<Footer />
+
+---
+
+# Service Worker Notes
+
+- Lifecycle (installing, installed, waiting, active, activated... )
+- Not transparent if installation fails
+
+---
+
+# On to Web Workers in CRA
+
+- Eject CRA
+- Use react-app-rewired + worker-plugin
+- [Pull request for Web Workers support](https://github.com/facebook/create-react-app/pull/5886)
+
+<Footer />
+
+---
+
+### Thread blocking demo
+
+<img src="code-block.png" style={{ maxWidth: '80%' }} />
+
+<Footer />
+
+---
+
+### Thread blocking demo
+
+<div
+  dangerouslySetInnerHTML={{
+    __html: `
+      <video
+        style="max-width: 70%"
+        controls
+        autoplay
+        loop
+        muted
+        src="./locked.mp4"
+      />
+    `
+  }}
+/>
+
+<Footer />
+
+---
+
+### Non-thread blocking demo
+
+##### React code
+
+<img src="react-worker-code.png" style={{ maxWidth: '80%' }} />
+
+<Footer />
+
+---
+
+### Non-thread blocking demo
+
+##### Worker code
+
+<img src="worker-code.png" style={{ maxWidth: '80%' }} />
+
+<Footer />
+
+---
+
+### Non-thread blocking demo
+
+<div
+  dangerouslySetInnerHTML={{
+    __html: `
+      <video
+        style="max-width: 70%"
+        controls
+        autoplay
+        loop
+        muted
+        src="./non-block.mp4"
+      />
+    `
+  }}
+/>
+
+<Footer />
+
+---
+
+# Notes on Web Workers
+
+- Dedicated worker is only accessible by the script that called it (new Worker())
+- Shared workers accessible by multiple scripts (new SharedWorker())
+- Can destroy with `myWorker.terminate()`
+- Can create "sub-workers"
+- Have access to global function, importScripts()
+
+<Footer />
+
+---
+
+# Tips and tricks
+
+- Testing locally run in incognito tab
+- Only works with HTTPS or localhost
+- Workbox CLI
+
+<Footer />
+
+---
+
+# References
+
+- [Progressive Web Apps CRA](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- [WorkBox](https://developers.google.com/web/tools/workbox/)
+- [Custom workbox config CRA Initial Proposal](https://github.com/facebook/create-react-app/issues/5359)
+- [Custom workbox config CRA Pull request ](https://github.com/facebook/create-react-app/pull/5369)
+- [Web worker vs. Service Worker](https://bitsofco.de/web-workers-vs-service-workers-vs-worklets/)
+- [Prefetch links](https://blog.bitsrc.io/prefetching-links-using-service-workers-d9f6babfd0b)
+- [Web Workers support in CRA](https://github.com/facebook/create-react-app/pull/5886)
+- [Worker Plugin](https://github.com/GoogleChromeLabs/worker-plugin)
+
+<Footer />
+
+---
+
+# Thanks! :raised_hands:
+
+<Footer />
