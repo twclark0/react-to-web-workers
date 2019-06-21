@@ -18,7 +18,7 @@ import { Title } from 'components/Title'
 
 ---
 
-# Table of Contents
+<Title text="Overview" />
 
 - What are workers? (web and service)
 
@@ -37,6 +37,10 @@ import { Title } from 'components/Title'
 > A service worker, properly configured, makes your web app fast and reliable.
 
 > -Jeff Posnick
+
+---
+
+<img src="andy.png" style={{ maxWidth: '50%' }} />
 
 ---
 
@@ -67,7 +71,7 @@ import { Title } from 'components/Title'
 
 ---
 
-# Not all :rose:
+## Not all :rose:
 
 <img src="tweet.png" />
 
@@ -133,9 +137,23 @@ import { Title } from 'components/Title'
 
 - Uses variety of eventListeners ('install', 'fetch', 'message')
 - Works off Promises
-- Works only through HTTPS & localhost
-- Utilizes the Cache Storage API
 - Have lifecycle events (Causes most confusion)
+
+<Footer />
+
+---
+
+## SERVICE WORKER :muscle:
+
+- Cache API + _Intercepting Fetch_ = offline experience
+
+<Footer />
+
+---
+
+### Caching Assets with Workbox & Cache API
+
+<img style={{ maxWidth: '80%' }} src="cache-api.png" />
 
 <Footer />
 
@@ -308,22 +326,21 @@ import { Title } from 'components/Title'
 
 ---
 
-# CRA notes
-
-- App can be added to phone
-- Assets have cache-first strategy
-- Cached navigation requests for your HTML
-
-<Footer />
-
----
-
 # CRA service-worker gotchas
 
 - Service worker is kept in "waiting" state
 - Users have to close tabs (not reload)
 - "New content is available once existing tabs are closed"
-- No cross-origin traffic
+
+<Footer />
+
+---
+
+# CRA notes
+
+- App can be added to phone
+- Assets have cache-first strategy
+- Cached navigation requests for your HTML
 
 <Footer />
 
@@ -346,14 +363,6 @@ import { Title } from 'components/Title'
 - Use other APIs such as Web Push :white_check_mark:
 - Relatively easy to add in CRA :white_check_mark:
 - See references page at end
-
-<Footer />
-
----
-
-### Caching Assets with Workbox & Cache API
-
-<img style={{ maxWidth: '80%' }} src="cache-api.png" />
 
 <Footer />
 
