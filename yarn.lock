@@ -1290,10 +1290,6 @@ bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.1.1, bn.js@^4.4.0:
   version "4.11.8"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/bn.js/-/bn.js-4.11.8.tgz#2cde09eb5ee341f484746bb0309b3253b1b1442f"
 
-bowser@^1.7.3:
-  version "1.9.4"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/bowser/-/bowser-1.9.4.tgz#890c58a2813a9d3243704334fa81b96a5c150c9a"
-
 brace-expansion@^1.1.7:
   version "1.1.11"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/brace-expansion/-/brace-expansion-1.1.11.tgz#3c7fcbf529d87226f3d2f52b966ff5271eb441dd"
@@ -1620,13 +1616,6 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
-code-surfer@^0.5.5:
-  version "0.5.5"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/code-surfer/-/code-surfer-0.5.5.tgz#223c7177de6f3a645a4bdfc17515d524ad88e038"
-  dependencies:
-    glamor "^2.20.40"
-    prism-react-renderer "^0.1.3"
-
 collapse-white-space@^1.0.0, collapse-white-space@^1.0.2:
   version "1.0.5"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/collapse-white-space/-/collapse-white-space-1.0.5.tgz#c2495b699ab1ed380d29a1091e01063e75dbbe3a"
@@ -1825,13 +1814,6 @@ crypto-browserify@^3.11.0:
     public-encrypt "^4.0.0"
     randombytes "^2.0.0"
     randomfill "^1.0.3"
-
-css-in-js-utils@^2.0.0:
-  version "2.0.1"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/css-in-js-utils/-/css-in-js-utils-2.0.1.tgz#3b472b398787291b47cfe3e44fecfdd9e914ba99"
-  dependencies:
-    hyphenate-style-name "^1.0.2"
-    isobject "^3.0.1"
 
 css-loader@^2.1.0:
   version "2.1.1"
@@ -2170,8 +2152,8 @@ events@^3.0.0:
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/events/-/events-3.0.0.tgz#9a0a0dfaf62893d92b875b8f2698ca4114973e88"
 
 eventsource@^1.0.7:
-  version "1.0.7"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/eventsource/-/eventsource-1.0.7.tgz#8fbc72c93fcd34088090bc0a4e64f4b5cee6d8d0"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/eventsource/-/eventsource-1.1.1.tgz#4544a35a57d7120fba4fa4c86cb4023b2c09df2f"
   dependencies:
     original "^1.0.0"
 
@@ -2263,7 +2245,7 @@ faye-websocket@~0.11.1:
   dependencies:
     websocket-driver ">=0.5.1"
 
-fbjs@^0.8.0, fbjs@^0.8.12:
+fbjs@^0.8.0:
   version "0.8.17"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
   dependencies:
@@ -2438,16 +2420,6 @@ gauge@~2.7.3:
 get-value@^2.0.3, get-value@^2.0.6:
   version "2.0.6"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/get-value/-/get-value-2.0.6.tgz#dc15ca1c672387ca76bd37ac0a395ba2042a2c28"
-
-glamor@^2.20.40:
-  version "2.20.40"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/glamor/-/glamor-2.20.40.tgz#f606660357b7cf18dface731ad1a2cfa93817f05"
-  dependencies:
-    fbjs "^0.8.12"
-    inline-style-prefixer "^3.0.6"
-    object-assign "^4.1.1"
-    prop-types "^15.5.10"
-    through "^2.3.8"
 
 glob-parent@^3.1.0:
   version "3.1.0"
@@ -2697,10 +2669,6 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-hyphenate-style-name@^1.0.2:
-  version "1.0.3"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/hyphenate-style-name/-/hyphenate-style-name-1.0.3.tgz#097bb7fa0b8f1a9cf0bd5c734cf95899981a9b48"
-
 iconv-lite@^0.4.24, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
   version "0.4.24"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
@@ -2776,13 +2744,6 @@ inherits@2.0.1:
 ini@^1.3.5, ini@~1.3.0:
   version "1.3.5"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
-
-inline-style-prefixer@^3.0.6:
-  version "3.0.8"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/inline-style-prefixer/-/inline-style-prefixer-3.0.8.tgz#8551b8e5b4d573244e66a34b04f7d32076a2b534"
-  dependencies:
-    bowser "^1.7.3"
-    css-in-js-utils "^2.0.0"
 
 inquirer@6.2.1:
   version "6.2.1"
@@ -3268,13 +3229,6 @@ mdurl@^1.0.1:
   version "1.0.1"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/mdurl/-/mdurl-1.0.1.tgz#fe85b2ec75a59037f2adfec100fd6c601761152e"
 
-mdx-deck-code-surfer@^0.5.5:
-  version "0.5.5"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/mdx-deck-code-surfer/-/mdx-deck-code-surfer-0.5.5.tgz#28fd2c2ea728ffdeac096228a9aa9d0643161cc2"
-  dependencies:
-    code-surfer "^0.5.5"
-    memoize-one "^4.0.2"
-
 mdx-deck@^2.3.2:
   version "2.3.2"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/mdx-deck/-/mdx-deck-2.3.2.tgz#4f9826d6169dc13d02b80572176e84ab64f86580"
@@ -3320,10 +3274,6 @@ mdx-deck@^2.3.2:
     webpack-hot-middleware "^2.24.3"
     webpack-merge "^4.2.1"
     webpackbar "^3.1.5"
-
-memoize-one@^4.0.2:
-  version "4.1.0"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/memoize-one/-/memoize-one-4.1.0.tgz#a2387c58c03fff27ca390c31b764a79addf3f906"
 
 memory-fs@^0.4.0, memory-fs@^0.4.1, memory-fs@~0.4.1:
   version "0.4.1"
@@ -3728,7 +3678,7 @@ opn@5.4.0:
 
 original@^1.0.0:
   version "1.0.2"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/original/-/original-1.0.2.tgz#e442a61cffe1c5fd20a65f3261c26663b303f25f"
+  resolved "https://registry.yarnpkg.com/original/-/original-1.0.2.tgz#e442a61cffe1c5fd20a65f3261c26663b303f25f"
   dependencies:
     url-parse "^1.4.3"
 
@@ -3982,10 +3932,6 @@ pretty-time@^1.1.0:
   version "1.1.0"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/pretty-time/-/pretty-time-1.1.0.tgz#ffb7429afabb8535c346a34e41873adf3d74dd0e"
 
-prism-react-renderer@^0.1.3:
-  version "0.1.6"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/prism-react-renderer/-/prism-react-renderer-0.1.6.tgz#c9216baa234fab1c234209fcdaf0cd23a01c50a9"
-
 prismjs@^1.8.4, prismjs@~1.16.0:
   version "1.16.0"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/prismjs/-/prismjs-1.16.0.tgz#406eb2c8aacb0f5f0f1167930cb83835d10a4308"
@@ -4014,7 +3960,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   dependencies:
@@ -4094,8 +4040,8 @@ querystring@0.2.0, querystring@^0.2.0:
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/querystring/-/querystring-0.2.0.tgz#b209849203bb25df820da756e747005878521620"
 
 querystringify@^2.1.1:
-  version "2.1.1"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/querystringify/-/querystringify-2.1.1.tgz#60e5a5fd64a7f8bfa4d2ab2ed6fdf4c85bad154e"
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
 
 quick-lru@^1.0.0:
   version "1.1.0"
@@ -4117,13 +4063,6 @@ randomfill@^1.0.3:
 range-parser@^1.2.1, range-parser@~1.2.1:
   version "1.2.1"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/range-parser/-/range-parser-1.2.1.tgz#3cf37023d199e1c24d1a55b84800c2f3e6468031"
-
-raw-loader@^3.0.0:
-  version "3.0.0"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/raw-loader/-/raw-loader-3.0.0.tgz#9a660dc9cfbfb8324eede3ea3511454d2a5d0389"
-  dependencies:
-    loader-utils "^1.1.0"
-    schema-utils "^1.0.0"
 
 rc@^1.2.7:
   version "1.2.8"
@@ -4387,7 +4326,7 @@ replace-ext@1.0.0:
 
 requires-port@^1.0.0:
   version "1.0.0"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
+  resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
 
 resize-observer-polyfill@^1.5.1:
   version "1.5.1"
@@ -4935,7 +4874,7 @@ through2@^2.0.0:
     readable-stream "~2.3.6"
     xtend "~4.0.1"
 
-through@^2.3.6, through@^2.3.8:
+through@^2.3.6:
   version "2.3.8"
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/through/-/through-2.3.8.tgz#0dd4c9ffaabc357960b1b724115d7e0e86a2e1f5"
 
@@ -5202,8 +5141,8 @@ urix@^0.1.0:
   resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/urix/-/urix-0.1.0.tgz#da937f7a62e21fec1fd18d49b35c2935067a6c72"
 
 url-parse@^1.4.3:
-  version "1.4.7"
-  resolved "http://repository.vnerd.com/artifactory/api/npm/npm-pluralsight/url-parse/-/url-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
+  version "1.5.10"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.10.tgz#9d3c2f736c1d75dd3bd2be507dcc111f1e2ea9c1"
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
